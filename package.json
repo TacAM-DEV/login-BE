@@ -3,7 +3,8 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "node ./bin/www"
+    "live": "node -r dotenv/config ./bin/www",
+    "dev": "nodemon -r dotenv/config ./bin/www dotenv_config_path=.env.test"
   },
   "dependencies": {
     "cookie-parser": "~1.4.4",
@@ -11,9 +12,11 @@
     "express": "~4.16.1",
     "http-errors": "~1.6.3",
     "morgan": "~1.9.1",
+    "mysql": "^2.18.1",
     "pug": "2.0.0-beta11"
   },
   "devDependencies": {
-    "dotenv": "^8.2.0"
+    "dotenv": "^8.2.0",
+    "nodemon": "^2.0.2"
   }
 }
