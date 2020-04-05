@@ -4,7 +4,8 @@
   "private": true,
   "scripts": {
     "live": "node -r dotenv/config ./bin/www",
-    "dev": "nodemon -r dotenv/config ./bin/www dotenv_config_path=.env.test"
+    "dev": "nodemon -r dotenv/config ./bin/www",
+    "dev-test": "nodemon -r dotenv/config ./bin/www dotenv_config_path=.env.test"
   },
   "dependencies": {
     "bcrypt": "^4.0.1",
@@ -12,6 +13,7 @@
     "debug": "~2.6.9",
     "express": "~4.16.1",
     "http-errors": "~1.6.3",
+    "jsonwebtoken": "^8.5.1",
     "morgan": "~1.9.1",
     "mysql": "^2.18.1",
     "pug": "2.0.0-beta11"
